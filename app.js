@@ -8,6 +8,7 @@ const morgan = require('morgan');
 const hbs = require('express-handlebars');
 
 
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: false}  ) );
 
 app.use(morgan('combined'));
