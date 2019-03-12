@@ -67,8 +67,25 @@ router.get('/postgetsingle/:id', (req,res)=>{
         
         let rows = result[0];
         console.log(rows.imageUrl)
-        res.render('playerdata', {imgURL: rows.imageUrl, name:rows.name
-            
+        res.render('playerdata', {
+            imgURL: rows.imageUrl,
+             number:rows.number, 
+             name:rows.name, age:rows.age,
+            birthdate:rows.birthdate,
+            birthplace:rows.birthplace,
+            height:rows.height,
+            weight:rows.weight
+            /**
+             *  <td>{{name}}</td> 
+        <td>{{number}}</td>
+        <td>{{age}}</td> 
+        <td>{{birthdate}}</td>
+        <td>{{birthplace}}</td> 
+        <td>{{height}}</td>
+        <td>{{weight}}</td> 
+             * 
+             * 
+             *  */
         
         })
 
